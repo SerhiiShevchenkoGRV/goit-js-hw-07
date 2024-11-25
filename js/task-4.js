@@ -1,4 +1,11 @@
 // ====== Stylization ======
+const bodyTag = document.querySelector("body");
+bodyTag.style.backgroundColor = "none";
+bodyTag.style.display = "flex";
+bodyTag.style.flexDirection = "column";
+bodyTag.style.justifyContent = "center";
+bodyTag.style.alignItems = "center";
+
 const form = document.querySelector(".login-form");
 form.style.display = "flex";
 form.style.alignItems = "flex-start";
@@ -76,17 +83,14 @@ button.addEventListener("mouseover", (event) => {
   button.style.backgroundColor = "#6c8cff";
   button.style.cursor = "pointer";
 });
-
 button.addEventListener("mouseout", (event) => {
   button.style.backgroundColor = "#4e75ff";
   button.style.cursor = "default";
 });
-
 button.addEventListener("mousedown", (event) => {
   button.style.transform = "scale(0.95)";
   button.style.boxShadow = "inset 0 4px 8px rgba(0, 0, 0, 0.2)";
 });
-
 button.addEventListener("mouseup", (event) => {
   button.style.transform = "scale(1)";
   button.style.boxShadow = "none";

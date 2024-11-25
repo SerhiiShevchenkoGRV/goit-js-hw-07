@@ -1,3 +1,10 @@
+const bodyTag = document.querySelector("body");
+bodyTag.style.backgroundColor = "none";
+bodyTag.style.display = "flex";
+bodyTag.style.flexDirection = "column";
+bodyTag.style.justifyContent = "center";
+bodyTag.style.alignItems = "center";
+
 const catList = document.querySelector("#categories");
 catList.style.listStyleType = "none";
 catList.style.margin = "0 auto";
