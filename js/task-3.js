@@ -22,13 +22,9 @@ output.style.color = "#2e2f42";
 const span = document.querySelector("#name-output");
 
 input.addEventListener("input", (event) => {
-  if (event.currentTarget.value.trim() !== "") {
-    span.textContent = event.currentTarget.value.trim();
-  }
-});
-
-input.addEventListener("blur", (event) => {
   if (event.currentTarget.value.trim() === "") {
     span.textContent = "Anonymous";
+  } else {
+    span.textContent = event.currentTarget.value.trim();
   }
 });

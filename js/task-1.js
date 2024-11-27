@@ -1,5 +1,5 @@
 const bodyTag = document.querySelector("body");
-bodyTag.style.backgroundColor = "none";
+bodyTag.style.backgroundColor = "transparent";
 bodyTag.style.display = "flex";
 bodyTag.style.flexDirection = "column";
 bodyTag.style.justifyContent = "center";

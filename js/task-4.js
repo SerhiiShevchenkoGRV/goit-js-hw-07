@@ -1,6 +1,7 @@
 // ====== Stylization ======
+
 const bodyTag = document.querySelector("body");
-bodyTag.style.backgroundColor = "none";
+bodyTag.style.backgroundColor = "transparent";
 bodyTag.style.display = "flex";
 bodyTag.style.flexDirection = "column";
 bodyTag.style.justifyContent = "center";
@@ -98,19 +99,19 @@ button.addEventListener("mouseup", (event) => {
 
 // ====== Form script ======
 
-const dataArr = {};
+const dataObj = {};
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.currentTarget;
-  const login = form.elements.email.value;
-  const password = form.elements.password.value;
+  const login = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
 
   if (login === "" || password === "") {
     return alert("All form fields must be filled in");
   } else {
-    dataArr.login = login;
-    dataArr.password = password;
+    dataObj.login = login;
+    dataObj.password = password;
   }
-  console.log(dataArr);
+  console.log(dataObj);
   form.reset();
 });
