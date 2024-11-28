@@ -128,18 +128,15 @@ function createBoxes(amount) {
   let width = 30;
   let height = 30;
   let markup = "";
+
   for (let i = 0; i < amount; i++) {
-    markup += "<div></div>";
-  }
-  boxContainer.innerHTML = markup;
-  const boxes = boxContainer.querySelectorAll("div");
-  for (const box of boxes) {
-    box.style.width = `${width}px`;
-    box.style.height = `${height}px`;
-    box.style.backgroundColor = getRandomHexColor();
+    const color = getRandomHexColor();
+    markup += `<div style="width: ${width}px; height: ${height}px; background-color: ${color};"></div>`;
     width += 10;
     height += 10;
   }
+
+  boxContainer.innerHTML = markup;
 }
 
 function destroyBoxes() {
